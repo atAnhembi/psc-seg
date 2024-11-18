@@ -33,6 +33,55 @@ public class Tabuleiro
                     return true;
                 }
                 return false;
+            case 3:
+                if (tabuleiro[0, 2] == PosicaoLivre)
+                {
+                    tabuleiro[0, 2] = jogador.Numero;
+                    return true;
+                }
+                return false;
+            case 4:
+                if (tabuleiro[1, 0] == PosicaoLivre)
+                {
+                    tabuleiro[1, 0] = jogador.Numero;
+                    return true;
+                }
+                return false;
+            case 5:
+                if (tabuleiro[1, 1] == PosicaoLivre)
+                {
+                    tabuleiro[1, 1] = jogador.Numero;
+                    return true;
+                }
+                return false;
+            case 6:
+                if (tabuleiro[1, 2] == PosicaoLivre)
+                {
+                    tabuleiro[1, 2] = jogador.Numero;
+                    return true;
+                }
+                return false;
+            case 7:
+                if (tabuleiro[2, 0] == PosicaoLivre)
+                {
+                    tabuleiro[2, 0] = jogador.Numero;
+                    return true;
+                }
+                return false;
+            case 8:
+                if (tabuleiro[2, 1] == PosicaoLivre)
+                {
+                    tabuleiro[2, 1] = jogador.Numero;
+                    return true;
+                }
+                return false;
+            case 9:
+                if (tabuleiro[2, 2] == PosicaoLivre)
+                {
+                    tabuleiro[2, 2] = jogador.Numero;
+                    return true;
+                }
+                return false;
 
             default: return false;
         }
@@ -122,11 +171,11 @@ public class Tabuleiro
 
 
         public Jogador VerificarDiagonalSecundaria() {
-        if (tabuleiro[0, 0] != PosicaoLivre &&
+        if (tabuleiro[0, 2] != PosicaoLivre &&
                 tabuleiro[0, 2] == tabuleiro[1, 1] &&
                 tabuleiro[1, 1] == tabuleiro[2, 0])
             {
-                if (tabuleiro[0, 0] == jogador1.Numero)
+                if (tabuleiro[0, 2] == jogador1.Numero)
                     return jogador1;
                 else
                     return jogador2;

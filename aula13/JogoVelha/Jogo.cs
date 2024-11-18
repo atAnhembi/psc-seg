@@ -46,12 +46,7 @@ public class Jogo
         return false;
     }
 
-    public bool verificaFimDeJogo() {
-        // se está cheio então empate
-        if(tabuleiro.ExistePosicaoLivre() == false) {
-            System.Console.WriteLine("Empate");
-            return true;
-        }
+    public bool VerificaFimDeJogo() {
         // se alguém ganhou:
         Jogador ganhou = tabuleiro.VerificaLinhasIguais();
         if(ganhou == null) {
@@ -64,9 +59,17 @@ public class Jogo
             }
         }
         if(ganhou != null) {
+            tabuleiro.Exibir();
             System.Console.WriteLine("Vitoria: " + ganhou.Nome);
             return true;
         } 
+        
+        // se está cheio então empate
+        if(tabuleiro.ExistePosicaoLivre() == false) {
+            System.Console.WriteLine("Empate");
+            return true;
+        }
+       
         return false;
     }
 
