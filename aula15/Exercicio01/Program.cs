@@ -11,3 +11,21 @@ interface Andar e escrevem os métodos de deslocamento.
 se movendo pela tela.
 
 */
+
+using Exercicio01;
+
+class Program
+{
+    public static void Main() 
+    {
+        IAndar[] personagens = [
+            new Orc(), 
+            new Troll(), new Orc(), new Troll()];
+
+
+        foreach (var personagem in personagens)
+        {
+            personagem.Deslocar(5);
+        }
+    }
+}
